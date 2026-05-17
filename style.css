@@ -3,9 +3,13 @@
   src: url('fonts/Gatchina Regular.ttf') format('truetype');
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -15,7 +19,10 @@ body {
   overflow-x: hidden;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 body::before {
   content: "";
@@ -203,9 +210,17 @@ footer {
     linear-gradient(to right, rgba(0,0,0,.38), rgba(0,0,0,.06));
 }
 
-.bg-ops::before { background-image: url('assets/ops.jpg'); }
-.bg-team::before { background-image: url('assets/team.jpg'); }
-.bg-vip::before { background-image: url('assets/vip.jpg'); }
+.bg-ops::before {
+  background-image: url('assets/ops.jpg');
+}
+
+.bg-team::before {
+  background-image: url('assets/team.jpg');
+}
+
+.bg-vip::before {
+  background-image: url('assets/vip.jpg');
+}
 
 .section-bg .section-inner,
 .info-section .section-inner,
@@ -278,14 +293,18 @@ input {
   font-size: 16px;
 }
 
-input::placeholder { color: rgba(255,255,255,.45); }
+input::placeholder {
+  color: rgba(255,255,255,.45);
+}
 
 .policy {
   margin-top: 14px;
   font-size: 12px;
 }
 
-.policy a { color: #ff3045; }
+.policy a {
+  color: #ff3045;
+}
 
 .reveal {
   opacity: 0;
@@ -298,65 +317,6 @@ input::placeholder { color: rgba(255,255,255,.45); }
   transform: translateY(0);
 }
 
-@media (min-width: 768px) {
-  header { padding: 24px 42px; }
-
-  #hero { padding: 0 42px 80px; }
-
-  .btn,
-  button {
-    width: fit-content;
-  }
-
-  .section-bg,
-  .info-section,
-  .callback-section,
-  footer {
-    padding: 110px 42px;
-  }
-
-  .split {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-
-  .cards article:nth-child(5) {
-    grid-column: 1 / -1;
-  }
-
-  form {
-    grid-template-columns: 1fr 1fr auto;
-    max-width: 860px;
-  }
-}
-
-@media (min-width: 1100px) {
-  #hero { padding: 0 80px 100px; }
-
-  .section-bg,
-  .info-section,
-  .callback-section,
-  footer {
-    padding: 120px 80px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .cards.two {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cards article:nth-child(5) {
-    grid-column: auto;
-  }
-}
 /* VACANCIES PAGE */
 
 .vacancy-hero {
@@ -366,6 +326,7 @@ input::placeholder { color: rgba(255,255,255,.45); }
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  background: #000;
 }
 
 .vacancy-hero::before {
@@ -402,14 +363,96 @@ input::placeholder { color: rgba(255,255,255,.45); }
   color: #ff3045;
 }
 
+/* LOGO END */
+
+.logo-end {
+  padding: 70px 20px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.okto-logo {
+  width: min(280px, 78vw);
+  height: auto;
+  filter:
+    drop-shadow(0 0 18px rgba(242,194,48,.22))
+    drop-shadow(0 0 35px rgba(255,255,255,.08));
+  opacity: .92;
+}
+
+/* ADAPTIVE */
+
 @media (min-width: 768px) {
+  header {
+    padding: 24px 42px;
+  }
+
+  #hero {
+    padding: 0 42px 80px;
+  }
+
+  .btn,
+  button {
+    width: fit-content;
+  }
+
+  .section-bg,
+  .info-section,
+  .callback-section,
+  footer {
+    padding: 110px 42px;
+  }
+
   .vacancy-hero {
     padding: 0 42px 90px;
+  }
+
+  .split {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .cards article:nth-child(5) {
+    grid-column: 1 / -1;
+  }
+
+  form {
+    grid-template-columns: 1fr 1fr auto;
+    max-width: 860px;
   }
 }
 
 @media (min-width: 1100px) {
+  #hero {
+    padding: 0 80px 100px;
+  }
+
+  .section-bg,
+  .info-section,
+  .callback-section,
+  footer {
+    padding: 120px 80px;
+  }
+
   .vacancy-hero {
     padding: 0 80px 110px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards.two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards article:nth-child(5) {
+    grid-column: auto;
   }
 }
